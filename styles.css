@@ -334,6 +334,35 @@ li:hover {
   width: 100%;
 }
 
+/* REDES SOCIALES */
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin-bottom: 2em;
+}
+
+.redes-sociales img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.redes-sociales img:hover {
+  transform: scale(1.15);
+  filter: brightness(1.1); /* efecto glow */
+}
+
+.github-personal {
+  filter: brightness(0) invert(1); /* blanco */
+}
+
+.github-uade {
+  filter: invert(49%) sepia(78%) saturate(430%) hue-rotate(180deg); /* azul institucional */
+}
+
+
   
 
 /* ----------- Responsive ----------- */
