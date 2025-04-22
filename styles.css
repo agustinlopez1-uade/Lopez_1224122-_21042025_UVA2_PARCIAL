@@ -222,6 +222,21 @@ li:hover {
     transition: background-color 0.3s ease;
 }
 
+.lista-contenido a{
+  color: var(--texto-principal);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 0.7em 1.2em 0.7em 1.2em;
+  border-radius: 0.3em;
+  text-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.2);
+}
+
+.lista-contenido a:hover{
+  color: var(--acento-suave);
+  text-decoration: underline;
+}
+
 /*
   Sobre Mi
 */
@@ -263,6 +278,54 @@ li:hover {
   line-height: 1.6;
   color: var(--texto-principal);
 }
+
+/* CONTACTO FORMULARIO */
+#formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  padding: 2em;
+  border-radius: 0.5em;
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+#formulario label {
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario textarea {
+  padding: 0.8em;
+  border: none;
+  border-radius: 0.4em;
+  font-family: var(--fuente-texto);
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--texto-principal);
+}
+
+#formulario input[type="submit"] {
+  padding: 0.8em 1.5em;
+  background-color: var(--acento);
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.4em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#formulario input[type="submit"]:hover {
+  background-color: var(--acento-suave);
+}
+
   
 
 /* ----------- Responsive ----------- */
@@ -310,6 +373,14 @@ li:hover {
   .foto-perfil {
     width: 250px;
     height: 200px;
+  }
+
+  .lista-contenido a {
+    display: block;
+    padding: 1em;
+    font-size: 1.1em;
+    margin-bottom: 0.6em;
+    text-align: center;
   }
 
 }
