@@ -12,155 +12,151 @@
   
     --fuente-titulos: 'DM Sans', sans-serif;
     --fuente-texto: 'Inter', sans-serif;
-  }
+}
   
-  body {
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(
-      to bottom right,
-      var(--degradado-1),
-      var(--degradado-2),
-      var(--degradado-3),
-      var(--degradado-4)
-    );
-    color: var(--texto-principal);
-    font-family: var(--fuente-texto);
-    font-size: 1em;
-  }
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to bottom right,
+    var(--degradado-1),
+    var(--degradado-2),
+    var(--degradado-3),
+    var(--degradado-4)
+  );
+  color: var(--texto-principal);
+  font-family: var(--fuente-texto);
+  font-size: 1em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 2em 1em;
+}
+
+/*Navegacion*/
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 0.5em 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: var(--texto-principal);
+  margin: 0 0.6em;
+  padding: 0.75em 1.25em;
+  font-size: 1em;
+  font-family: var(--fuente-titulos);
+  text-decoration: none;
+  transition: text-shadow 0.2s ease;
+}
+
+nav a:hover {
+  text-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*Títulos*/
+
+.encabezado {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 1.5em;
+  box-sizing: border-box;
+  text-align: center; 
+}  
+
+h1 {
+  font-family: 'Sora', sans-serif;
+  font-size: 3.5em;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0;
+  background: linear-gradient(to right, #fff, var(--acento));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0.2em 0.7em rgba(0, 0, 0, 0.25);
+}
+
+.subintro {
+  font-size: 1.75em;
+  font-weight: 500;
+  color: var(--texto-principal);
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  text-shadow: 0 0.05em 0.2em rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/*Tabla*/
+
+.tabla {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 1em;
+  box-sizing: border-box;
+}
+
+.tabla-contenido {
+  width: 100%;
+  max-width: 1000px;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 0.5em;
+  padding: 1em;
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+}
+
+th {
+  padding-bottom: 1em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+td, th {
+  padding: 0.5em 1em;
+  color: var(--texto-principal);
+  font-family: var(--fuente-texto);
+}
+
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  transition: background-color 0.3s ease;
+}
+
+tr:not(:first-child) {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
   
-  nav {
-    display: flex;
-    justify-content: center;
-    padding: 0.5em 0;
-    background-color: rgba(0, 0, 0, 0.1);
-  }
+/*Footer*/
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  padding: 1em;
+  color: var(--texto-secundario);
+}
   
-  nav a {
-    color: var(--texto-principal);
-    margin: 0 0.6em;
-    padding: 0.75em 1.25em;
-    font-size: 1em;
-    font-family: var(--fuente-titulos);
-    text-decoration: none;
-    transition: text-shadow 0.2s ease;
-  }
-  
-  nav a:hover {
-    text-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.2);
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    padding: 2em 1em;
-  }
-  
-  /* ------------------------------
-     Títulos
-  ------------------------------ */
-  
-  .encabezado {
-    width: 100%;
-    max-width: 1000px;
-    margin-bottom: 1.5em;
-    box-sizing: border-box;
-    text-align: center; 
-  }  
-  
-  h1 {
-    font-family: 'Sora', sans-serif;
-    font-size: 3.5em;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
-    margin: 0;
-    background: linear-gradient(to right, #fff, var(--acento));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0.2em 0.7em rgba(0, 0, 0, 0.25);
-  }
-  
-  .subintro {
-    font-size: 1.75em;
-    font-weight: 500;
-    color: var(--texto-principal);
-    margin-top: 0.3em;
-    margin-bottom: 0;
-    text-shadow: 0 0.05em 0.2em rgba(0, 0, 0, 0.1);
-    text-align: left;
-  }
-  
-  /* ------------------------------
-     Tabla
-  ------------------------------ */
-  
-  .tabla {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 0 1em;
-    box-sizing: border-box;
-  }
-  
-  .tabla-contenido {
-    width: 100%;
-    max-width: 1000px;
-  }
-  
-  table {
-    width: 100%;
-    table-layout: fixed;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(6px);
-    border-radius: 0.5em;
-    padding: 1em;
-    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.1);
-    border-collapse: collapse;
-  }
-  
-  th {
-    padding-bottom: 1em;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-align: left;
-  }
-  
-  td, th {
-    padding: 0.5em 1em;
-    color: var(--texto-principal);
-    font-family: var(--fuente-texto);
-  }
-  
-  tbody tr:hover {
-    background-color: rgba(255, 255, 255, 0.06);
-    transition: background-color 0.3s ease;
-  }
-  
-  tr:not(:first-child) {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  /* ------------------------------
-     Footer
-  ------------------------------ */
-  
-  footer {
-    text-align: center;
-    font-size: 0.9em;
-    padding: 1em;
-    color: var(--texto-secundario);
-  }
-  
-  /* ------------------------------
-  Menu Toogle
------------------------------- */
+/*Menu*/
 
 #menu-toggle {
     display: none;
@@ -180,10 +176,8 @@
     gap: 1em;
 }
 
-/*
-    Lista Contenido
-*/
-  
+/*Lista Contenedor*/
+
 .contenedor-lista {
     width: 100%;
     max-width: 1000px;
@@ -238,9 +232,7 @@ li:hover {
   text-decoration: underline;
 }
 
-/*
-  Sobre Mi
-*/
+  /*Sobre Mi*/
 
 .sobre-mi-contenido{
   display: flex;
@@ -267,7 +259,6 @@ li:hover {
 
 .foto-perfil {
   width: 300px;
-  height: 250x;
   object-fit: cover;
   border-radius: 5px;
   box-shadow: 0 0.3em 0.8em rgba(0, 0, 0, 0.3);
@@ -285,7 +276,7 @@ li:hover {
   color: var(--texto-principal);
 }
 
-/* CONTACTO FORMULARIO */
+/*Formulario*/
 #formulario {
   display: flex;
   flex-direction: column;
@@ -340,7 +331,7 @@ li:hover {
   width: 100%;
 }
 
-/* REDES SOCIALES */
+/* Redes Sociales */
 
 .redes-sociales {
   display: flex;
@@ -367,9 +358,6 @@ li:hover {
 .github-uade {
   filter: invert(49%) sepia(78%) saturate(430%) hue-rotate(180deg); /* azul institucional */
 }
-
-
-  
 
 /* ----------- Responsive ----------- */
 @media (max-width: 768px) {
@@ -424,6 +412,11 @@ li:hover {
     font-size: 1.1em;
     margin-bottom: 0.6em;
     text-align: center;
+  }
+
+  #formulario input[type="submit"] {
+    align-self: center;
+    width: auto;
   }
 
 }
