@@ -326,6 +326,14 @@ li:hover {
   background-color: var(--acento-suave);
 }
 
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario textarea,
+#formulario input[type="submit"] {
+  box-sizing: border-box;
+  width: 100%;
+}
+
   
 
 /* ----------- Responsive ----------- */
