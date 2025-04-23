@@ -386,10 +386,49 @@ li:hover {
       padding: 0.5em 0;
   }
 
-  th{
-    font-size: 0.75em;
+  .encabezado h1 {
+    font-size: 2.2em;
+    padding: 0.3em 0;
+    line-height: 1.2;
+    text-align: center;
+    word-break: break-word;
   }
 
+  .contenedor-lista {
+    padding: 1.2em 1em;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+  
+  .sobre-mi-contenido {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5em 1em;
+  }
+
+  .tabla-contenido {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    table-layout: fixed; 
+    word-wrap: break-word;
+    border-collapse: collapse;
+  }
+
+  th {
+    font-size: 0.75em;
+    padding: 0.4em;
+  }
+
+  td {
+    font-size: 0.85em;
+    padding: 0.4em;
+  }
+  
   .sobre-mi-contenido {
     flex-direction: column;
     align-items: center;
