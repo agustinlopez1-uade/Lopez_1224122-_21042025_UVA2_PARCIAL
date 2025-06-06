@@ -459,3 +459,30 @@ li:hover {
   }
 
 }
+
+/* MODO OSCURO */
+body.dark {
+  --degradado-1: #3b2667;
+  --degradado-2: #2c1a47;
+  --degradado-3: #1a1a2e;
+  --degradado-4: #0f0c29;
+
+  --texto-principal: #f1f1f1;
+  --texto-secundario: #a3a3a3;
+  --acento: #00d1ff;
+  --acento-suave: #fca311;
+  --rojo: #ff4b5c;
+}
+
+body.dark h1 {
+  background: linear-gradient(
+    to bottom right,
+    #ff416c,  /* degradado-1 */
+    #ff4b2b,  /* degradado-2 */
+    #9b59b6,  /* degradado-3 */
+    #3b2667   /* degradado-4 */
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
