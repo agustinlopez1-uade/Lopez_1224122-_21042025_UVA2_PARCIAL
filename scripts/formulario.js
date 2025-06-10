@@ -1,3 +1,4 @@
+//JS
 document.addEventListener('DOMContentLoaded', () => {
     console.log('script cargado');
 
@@ -12,26 +13,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const mensaje = document.getElementById('mensaje').value;
 
         if (!palabraEsValida(nombre)) {
-            alert('Ingresa un nombre valido.');
+            mostrarError('* Ingresa un nombre valido');
             return;
         }
         if (!palabraEsValida(apellido)) {
-            alert('Ingresa un apellido valido.');
+            mostrarError('* Ingresa un apellido valido');
             return;
         }
         if (esVacio(email)){
-            alert('El email no puede ser vacio.');
+            mostrarError('* El email no puede ser vacio');
             return;
         }
         if (esVacio(asunto)){
-            alert('El asunto no puede ser vacio.');
+            mostrarError('* El asunto no puede ser vacio');
             return;
         }
         if(esVacio(mensaje)){
-            alert('El mensaje no puede ser vacio.');
+            mostrarError('* El mensaje no puede ser vacio');
             return;
         }
 
+        reiniciarFormulario();
         alert('Gracias ' + nombre + ', en breve le estaré respondiendo');
     });
 });
@@ -43,3 +45,16 @@ function palabraEsValida(palabra) {
 function esVacio(campo) {
     return campo.length == 0;
 }
+
+//JQUERY
+$(document).ready(function(){
+    mostrarError = function error(mensaje) {
+        $("#error").show();
+        $("#error").text(mensaje);
+    };
+
+    reiniciarFormulario = () => {
+        $("#error").hide();
+        $("#formulario")[0].reset();
+    }
+});

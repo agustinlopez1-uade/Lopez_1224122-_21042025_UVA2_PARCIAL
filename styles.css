@@ -32,6 +32,12 @@ body {
   font-size: 1em;
 }
 
+#error{
+  font-weight: bolder;
+  color:black;
+  display: none;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -506,3 +512,8 @@ body.dark h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+body.dark #error{
+  color:red;
+}
+
